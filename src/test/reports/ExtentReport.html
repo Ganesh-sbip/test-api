@@ -1,0 +1,1071 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Cucumber Framework</title>
+
+	<style type='text/css'>
+			
+      
+        
+      
+		
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Cucumber Extent Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Nov 5, 2021 02:45:42 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.2</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@getAPC</a></li>
+					<li><a href='#'>@negativeAPCscenario</a></li>
+					<li><a href='#'>@postAPC</a></li>
+					<li><a href='#'>@putAPC</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Features</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> feature(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Scenarios</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>7</span> scenario(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>32</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Features</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>GET: Scenarios related to GET requests</span>
+						<span class='test-time'>Nov 5, 2021 02:45:42 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 3s+147ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">GET: Test the "imgflip.com"</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@getAPC</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">GET: Test the "imgflip.com"</span>
+			
+				<ul class='steps'>
+					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I want to set URL as "imgflipEndpoint" with "/get_memes" for test case "imgflip.com test"</span>
+							<div class='pre'>pass :: Cucumber Hostname URL is :: https://api.imgflip.com/get_memes</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='5' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I set header content type as "application/json"</span>
+							<div class='pre'>pass :: content type is :: application/json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='6' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I hit the API with requestbody "" and request method is "GET"</span>
+							<div class='pre'>pass :: Request successfully processed</div>
+							<div class='pre'>Response is :: {"success":true,"data":{"memes":[{"id":"181913649","name":"Drake Hotline Bling","url":"https:\/\/i.imgflip.com\/30b1gx.jpg","width":1200,"height":1200,"box_count":2},{"id":"87743020","name":"Two Buttons","url":"https:\/\/i.imgflip.com\/1g8my4.jpg","width":600,"height":908,"box_count":3},{"id":"112126428","name":"Distracted Boyfriend","url":"https:\/\/i.imgflip.com\/1ur9b0.jpg","width":1200,"height":800,"box_count":3},{"id":"131087935","name":"Running Away Balloon","url":"https:\/\/i.imgflip.com\/261o3j.jpg","width":761,"height":1024,"box_count":5},{"id":"247375501","name":"Buff Doge vs. Cheems","url":"https:\/\/i.imgflip.com\/43a45p.png","width":937,"height":720,"box_count":4},{"id":"124822590","name":"Left Exit 12 Off Ramp","url":"https:\/\/i.imgflip.com\/22bdq6.jpg","width":804,"height":767,"box_count":3},{"id":"129242436","name":"Change My Mind","url":"https:\/\/i.imgflip.com\/24y43o.jpg","width":482,"height":361,"box_count":2},{"id":"217743513","name":"UNO Draw 25 Cards","url":"https:\/\/i.imgflip.com\/3lmzyx.jpg","width":500,"height":494,"box_count":2},{"id":"131940431","name":"Gru's Plan","url":"https:\/\/i.imgflip.com\/26jxvz.jpg","width":700,"height":449,"box_count":4},{"id":"222403160","name":"Bernie I Am Once Again Asking For Your Support","url":"https:\/\/i.imgflip.com\/3oevdk.jpg","width":750,"height":750,"box_count":2},{"id":"438680","name":"Batman Slapping Robin","url":"https:\/\/i.imgflip.com\/9ehk.jpg","width":400,"height":387,"box_count":2},{"id":"188390779","name":"Woman Yelling At Cat","url":"https:\/\/i.imgflip.com\/345v97.jpg","width":680,"height":438,"box_count":2},{"id":"4087833","name":"Waiting Skeleton","url":"https:\/\/i.imgflip.com\/2fm6x.jpg","width":298,"height":403,"box_count":2},{"id":"93895088","name":"Expanding Brain","url":"https:\/\/i.imgflip.com\/1jwhww.jpg","width":857,"height":1202,"box_count":4},{"id":"80707627","name":"Sad Pablo Escobar","url":"https:\/\/i.imgflip.com\/1c1uej.jpg","width":720,"height":709,"box_count":3},{"id":"135256802","name":"Epic Handshake","url":"https:\/\/i.imgflip.com\/28j0te.jpg","width":900,"height":645,"box_count":3},{"id":"148909805","name":"Monkey Puppet","url":"https:\/\/i.imgflip.com\/2gnnjh.jpg","width":923,"height":768,"box_count":2},{"id":"97984","name":"Disaster Girl","url":"https:\/\/i.imgflip.com\/23ls.jpg","width":500,"height":375,"box_count":2},{"id":"1035805","name":"Boardroom Meeting Suggestion","url":"https:\/\/i.imgflip.com\/m78d.jpg","width":500,"height":649,"box_count":4},{"id":"226297822","name":"Panik Kalm Panik","url":"https:\/\/i.imgflip.com\/3qqcim.png","width":640,"height":881,"box_count":3},{"id":"102156234","name":"Mocking Spongebob","url":"https:\/\/i.imgflip.com\/1otk96.jpg","width":502,"height":353,"box_count":2},{"id":"119139145","name":"Blank Nut Button","url":"https:\/\/i.imgflip.com\/1yxkcp.jpg","width":600,"height":446,"box_count":2},{"id":"178591752","name":"Tuxedo Winnie The Pooh","url":"https:\/\/i.imgflip.com\/2ybua0.png","width":800,"height":582,"box_count":2},{"id":"252600902","name":"Always Has Been","url":"https:\/\/i.imgflip.com\/46e43q.png","width":960,"height":540,"box_count":2},{"id":"110163934","name":"I Bet He's Thinking About Other Women","url":"https:\/\/i.imgflip.com\/1tl71a.jpg","width":1654,"height":930,"box_count":2},{"id":"91538330","name":"X, X Everywhere","url":"https:\/\/i.imgflip.com\/1ihzfe.jpg","width":2118,"height":1440,"box_count":2},{"id":"27813981","name":"Hide the Pain Harold","url":"https:\/\/i.imgflip.com\/gk5el.jpg","width":480,"height":601,"box_count":2},{"id":"195515965","name":"Clown Applying Makeup","url":"https:\/\/i.imgflip.com\/38el31.jpg","width":750,"height":798,"box_count":4},{"id":"216951317","name":"Guy Holding Cardboard Sign","url":"https:\/\/i.imgflip.com\/3l60ph.jpg","width":700,"height":702,"box_count":2},{"id":"114585149","name":"Inhaling Seagull","url":"https:\/\/i.imgflip.com\/1w7ygt.jpg","width":1269,"height":2825,"box_count":4},{"id":"180190441","name":"They're The Same Picture","url":"https:\/\/i.imgflip.com\/2za3u1.jpg","width":1363,"height":1524,"box_count":3},{"id":"100777631","name":"Is This A Pigeon","url":"https:\/\/i.imgflip.com\/1o00in.jpg","width":1587,"height":1425,"box_count":3},{"id":"79132341","name":"Bike Fall","url":"https:\/\/i.imgflip.com\/1b42wl.jpg","width":500,"height":680,"box_count":3},{"id":"61579","name":"One Does Not Simply","url":"https:\/\/i.imgflip.com\/1bij.jpg","width":568,"height":335,"box_count":2},{"id":"55311130","name":"This Is Fine","url":"https:\/\/i.imgflip.com\/wxica.jpg","width":580,"height":282,"box_count":2},{"id":"101470","name":"Ancient Aliens","url":"https:\/\/i.imgflip.com\/26am.jpg","width":500,"height":437,"box_count":2},{"id":"89370399","name":"Roll Safe Think About It","url":"https:\/\/i.imgflip.com\/1h7in3.jpg","width":702,"height":395,"box_count":2},{"id":"155067746","name":"Surprised Pikachu","url":"https:\/\/i.imgflip.com\/2kbn1e.jpg","width":1893,"height":1893,"box_count":3},{"id":"134797956","name":"American Chopper Argument","url":"https:\/\/i.imgflip.com\/2896ro.jpg","width":640,"height":1800,"box_count":5},{"id":"123999232","name":"The Scroll Of Truth","url":"https:\/\/i.imgflip.com\/21tqf4.jpg","width":1280,"height":1236,"box_count":2},{"id":"259237855","name":"Laughing Leo","url":"https:\/\/i.imgflip.com\/4acd7j.png","width":470,"height":470,"box_count":2},{"id":"61544","name":"Success Kid","url":"https:\/\/i.imgflip.com\/1bhk.jpg","width":500,"height":500,"box_count":2},{"id":"124055727","name":"Y'all Got Any More Of That","url":"https:\/\/i.imgflip.com\/21uy0f.jpg","width":600,"height":471,"box_count":2},{"id":"135678846","name":"Who Killed Hannibal","url":"https:\/\/i.imgflip.com\/28s2gu.jpg","width":1280,"height":1440,"box_count":3},{"id":"3218037","name":"This Is Where I'd Put My Trophy If I Had One","url":"https:\/\/i.imgflip.com\/1wz1x.jpg","width":300,"height":418,"box_count":2},{"id":"99683372","name":"Sleeping Shaq","url":"https:\/\/i.imgflip.com\/1nck6k.jpg","width":640,"height":631,"box_count":2},{"id":"28251713","name":"Oprah You Get A","url":"https:\/\/i.imgflip.com\/gtj5t.jpg","width":620,"height":465,"box_count":2},{"id":"161865971","name":"Marked Safe From","url":"https:\/\/i.imgflip.com\/2odckz.jpg","width":618,"height":499,"box_count":2},{"id":"21735","name":"The Rock Driving","url":"https:\/\/i.imgflip.com\/grr.jpg","width":568,"height":700,"box_count":2},{"id":"6235864","name":"Finding Neverland","url":"https:\/\/i.imgflip.com\/3pnmg.jpg","width":423,"height":600,"box_count":3},{"id":"84341851","name":"Evil Kermit","url":"https:\/\/i.imgflip.com\/1e7ql7.jpg","width":700,"height":325,"box_count":2},{"id":"196652226","name":"Spongebob Ight Imma Head Out","url":"https:\/\/i.imgflip.com\/392xtu.jpg","width":822,"height":960,"box_count":2},{"id":"101288","name":"Third World Skeptical Kid","url":"https:\/\/i.imgflip.com\/265k.jpg","width":426,"height":426,"box_count":2},{"id":"61520","name":"Futurama Fry","url":"https:\/\/i.imgflip.com\/1bgw.jpg","width":552,"height":414,"box_count":2},{"id":"132769734","name":"Hard To Swallow Pills","url":"https:\/\/i.imgflip.com\/271ps6.jpg","width":680,"height":979,"box_count":2},{"id":"175540452","name":"Unsettled Tom","url":"https:\/\/i.imgflip.com\/2wifvo.jpg","width":680,"height":550,"box_count":2},{"id":"61556","name":"Grandma Finds The Internet","url":"https:\/\/i.imgflip.com\/1bhw.jpg","width":640,"height":480,"box_count":2},{"id":"8072285","name":"Doge","url":"https:\/\/i.imgflip.com\/4t0m5.jpg","width":620,"height":620,"box_count":5},{"id":"5496396","name":"Leonardo Dicaprio Cheers","url":"https:\/\/i.imgflip.com\/39t1o.jpg","width":600,"height":400,"box_count":2},{"id":"91545132","name":"Trump Bill Signing","url":"https:\/\/i.imgflip.com\/1ii4oc.jpg","width":1866,"height":1529,"box_count":2},{"id":"61532","name":"The Most Interesting Man In The World","url":"https:\/\/i.imgflip.com\/1bh8.jpg","width":550,"height":690,"box_count":2},{"id":"563423","name":"That Would Be Great","url":"https:\/\/i.imgflip.com\/c2qn.jpg","width":526,"height":440,"box_count":2},{"id":"14371066","name":"Star Wars Yoda","url":"https:\/\/i.imgflip.com\/8k0sa.jpg","width":620,"height":714,"box_count":2},{"id":"4173692","name":"Scared Cat","url":"https:\/\/i.imgflip.com\/2hgfw.jpg","width":620,"height":464,"box_count":2},{"id":"61546","name":"Brace Yourselves X is Coming","url":"https:\/\/i.imgflip.com\/1bhm.jpg","width":622,"height":477,"box_count":2},{"id":"29617627","name":"Look At Me","url":"https:\/\/i.imgflip.com\/hmt3v.jpg","width":300,"height":300,"box_count":2},{"id":"8279814","name":"Cute Cat","url":"https:\/\/i.imgflip.com\/4xgqu.jpg","width":480,"height":532,"box_count":2},{"id":"6531067","name":"See Nobody Cares","url":"https:\/\/i.imgflip.com\/3vzej.jpg","width":620,"height":676,"box_count":2},{"id":"460541","name":"Jack Sparrow Being Chased","url":"https:\/\/i.imgflip.com\/9vct.jpg","width":500,"height":375,"box_count":2},{"id":"163573","name":"Imagination Spongebob","url":"https:\/\/i.imgflip.com\/3i7p.jpg","width":500,"height":366,"box_count":2},{"id":"61533","name":"X All The Y","url":"https:\/\/i.imgflip.com\/1bh9.jpg","width":500,"height":355,"box_count":2},{"id":"101716","name":"Yo Dawg Heard You","url":"https:\/\/i.imgflip.com\/26hg.jpg","width":500,"height":323,"box_count":2},{"id":"24557067","name":"Afraid To Ask Andy","url":"https:\/\/i.imgflip.com\/emccr.jpg","width":620,"height":608,"box_count":2},{"id":"101910402","name":"Who Would Win?","url":"https:\/\/i.imgflip.com\/1ooaki.jpg","width":802,"height":500,"box_count":2},{"id":"371382","name":"Simba Shadowy Place","url":"https:\/\/i.imgflip.com\/7yk6.jpg","width":363,"height":720,"box_count":2},{"id":"89655","name":"Uncle Sam","url":"https:\/\/i.imgflip.com\/1x6f.jpg","width":620,"height":833,"box_count":2},{"id":"101511","name":"Don't You Squidward","url":"https:\/\/i.imgflip.com\/26br.jpg","width":500,"height":333,"box_count":2},{"id":"21604248","name":"Mugatu So Hot Right Now","url":"https:\/\/i.imgflip.com\/cv1y0.jpg","width":620,"height":497,"box_count":2},{"id":"101287","name":"Third World Success Kid","url":"https:\/\/i.imgflip.com\/265j.jpg","width":500,"height":500,"box_count":2},{"id":"1367068","name":"I Should Buy A Boat Cat","url":"https:\/\/i.imgflip.com\/tau4.jpg","width":500,"height":368,"box_count":2},{"id":"61539","name":"First World Problems","url":"https:\/\/i.imgflip.com\/1bhf.jpg","width":552,"height":367,"box_count":2},{"id":"176908","name":"Shut Up And Take My Money Fry","url":"https:\/\/i.imgflip.com\/3si4.jpg","width":500,"height":281,"box_count":2},{"id":"29562797","name":"I'm The Captain Now","url":"https:\/\/i.imgflip.com\/hlmst.jpg","width":478,"height":350,"box_count":2},{"id":"61585","name":"Bad Luck Brian","url":"https:\/\/i.imgflip.com\/1bip.jpg","width":475,"height":562,"box_count":2},{"id":"61580","name":"Too Damn High","url":"https:\/\/i.imgflip.com\/1bik.jpg","width":420,"height":316,"box_count":2},{"id":"28034788","name":"Marvel Civil War 1","url":"https:\/\/i.imgflip.com\/govs4.jpg","width":423,"height":734,"box_count":2},{"id":"61527","name":"Y U No","url":"https:\/\/i.imgflip.com\/1bh3.jpg","width":500,"height":500,"box_count":2},{"id":"183518946","name":"Blank Transparent Square","url":"https:\/\/i.imgflip.com\/319g4i.png","width":1000,"height":1000,"box_count":2},{"id":"16464531","name":"But That's None Of My Business","url":"https:\/\/i.imgflip.com\/9sw43.jpg","width":600,"height":600,"box_count":2},{"id":"142921050","name":"Car Salesman Slaps Roof Of Car","url":"https:\/\/i.imgflip.com\/2d3al6.jpg","width":800,"height":450,"box_count":2},{"id":"109765","name":"I'll Just Wait Here","url":"https:\/\/i.imgflip.com\/2cp1.jpg","width":491,"height":550,"box_count":2},{"id":"922147","name":"Laughing Men In Suits","url":"https:\/\/i.imgflip.com\/jrj7.jpg","width":500,"height":333,"box_count":2},{"id":"405658","name":"Grumpy Cat","url":"https:\/\/i.imgflip.com\/8p0a.jpg","width":500,"height":617,"box_count":2},{"id":"61581","name":"Put It Somewhere Else Patrick","url":"https:\/\/i.imgflip.com\/1bil.jpg","width":343,"height":604,"box_count":2},{"id":"71428573","name":"Say it Again, Dexter","url":"https:\/\/i.imgflip.com\/16iyn1.jpg","width":698,"height":900,"box_count":2},{"id":"7183956","name":"Oprah You Get A Car Everybody Gets A Car","url":"https:\/\/i.imgflip.com\/49z6c.jpg","width":620,"height":1004,"box_count":4},{"id":"444501","name":"Maury Lie Detector","url":"https:\/\/i.imgflip.com\/9iz9.jpg","width":381,"height":378,"box_count":2},{"id":"40945639","name":"Dr Evil Laser","url":"https:\/\/i.imgflip.com\/odluv.jpg","width":500,"height":405,"box_count":2},{"id":"1464444","name":"Happy Star Congratulations","url":"https:\/\/i.imgflip.com\/vdz0.jpg","width":450,"height":292,"box_count":4},{"id":"100947","name":"Matrix Morpheus","url":"https:\/\/i.imgflip.com\/25w3.jpg","width":500,"height":303,"box_count":2}]}}</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='7' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I try to verify the status code is "200"</span>
+							<div class='pre'>pass :: Status Code is :: 200</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='8' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I try to verify the response value "success" is "true"</span>
+							<div class='pre'>Actual Value is  ::true</div>
+							<div class='pre'>Expected Value is  ::true</div>
+							<div class='pre'>pass success : Expected value : true mathches with Actual Value : true</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='9' status='pass'>
+	<span class='duration right label'>0h 0m 0s+571ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">GET: Test the "dog.ceo"</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='10' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@getAPC</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">GET: Test the "dog.ceo"</span>
+			
+				<ul class='steps'>
+					<li test-id='11' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I want to set URL as "dogbreedEndpoint" with "/image/random" for test case "dog.ceo test"</span>
+							<div class='pre'>pass :: Cucumber Hostname URL is :: https://dog.ceo/api/breeds/image/random</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='12' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I set header content type as "application/json"</span>
+							<div class='pre'>pass :: content type is :: application/json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='13' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I hit the API with requestbody "" and request method is "GET"</span>
+							<div class='pre'>pass :: Request successfully processed</div>
+							<div class='pre'>Response is :: {"message":"https:\/\/images.dog.ceo\/breeds\/malinois\/n02105162_3595.jpg","status":"success"}</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='14' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I try to verify the status code is "200"</span>
+							<div class='pre'>pass :: Status Code is :: 200</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='15' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I try to verify the response value "status" is "success"</span>
+							<div class='pre'>Actual Value is  ::success</div>
+							<div class='pre'>Expected Value is  ::success</div>
+							<div class='pre'>pass status : Expected value : success mathches with Actual Value : success</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='16' status='pass'>
+	<span class='duration right label'>0h 0m 0s+463ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">GET: Test the "lolwallpapers.docs.apiary.io"</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='17' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@getAPC</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">GET: Test the "lolwallpapers.docs.apiary.io"</span>
+			
+				<ul class='steps'>
+					<li test-id='18' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I want to set URL as "wallpapersEndpoint" with "/alpha/wallpapers?limit=2" for test case "lolwallpapers.docs.apiary.io test"</span>
+							<div class='pre'>pass :: Cucumber Hostname URL is :: https://private-6b0667-lolwallpapers.apiary-mock.com/alpha/wallpapers?limit=2</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='19' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I set header content type as "application/json"</span>
+							<div class='pre'>pass :: content type is :: application/json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='20' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I hit the API with requestbody "" and request method is "GET"</span>
+							<div class='pre'>pass :: Request successfully processed</div>
+							<div class='pre'>Response is :: {
+    "meta": {
+        "success": true,
+        "msg": null
+    },
+    "pagination": {
+        "limit": 2,
+        "page": 1,
+        "max_num_pages": 1174
+    },
+    "data": [
+        {
+            "ID": 13670,
+            "datetime": "2017-08-27 12:21:15",
+            "last_modified": "2017-08-27 12:21:15",
+            "title": "Ornn",
+            "filename": "59a280d1e222f.jpg",
+            "width": 1920,
+            "height": 1080,
+            "mime_type": "image/jpeg",
+            "filesize": 1018253,
+            "pretty_filesize": "994 KB",
+            "links": {
+                "page": "https://lolwallpapers.net/wallpaper/13670",
+                "image": "https://static.lolwallpapers.net/2017/08/59a280d1e222f.jpg",
+                "download": "https://dl.lolwallpapers.net/?id=13670"
+            },
+            "sizes": {
+                "thumbnail": {
+                    "filename": "59a280d1e222f-150x150.jpg",
+                    "width": 150,
+                    "height": 150,
+                    "link": "https://static.lolwallpapers.net/2017/08/59a280d1e222f-150x150.jpg"
+                },
+                "medium": {
+                    "filename": "59a280d1e222f-300x300.jpg",
+                    "width": 300,
+                    "height": 300,
+                    "link": "https://static.lolwallpapers.net/2017/08/59a280d1e222f-300x300.jpg"
+                },
+                "large": {
+                    "filename": "59a280d1e222f-1024x576.jpg",
+                    "width": 1024,
+                    "height": 576,
+                    "link": "https://static.lolwallpapers.net/2017/08/59a280d1e222f-1024x576.jpg"
+                }
+            },
+            "categories": [
+                {
+                    "ID": 375,
+                    "name": "Fan Art"
+                },
+                {
+                    "ID": 809,
+                    "name": "Ornn"
+                }
+            ],
+            "artists": [
+                {
+                    "ID": 803,
+                    "name": "KPPOnline"
+                }
+            ],
+            "uploader_ID": 6,
+            "comment_count": 0,
+            "view_count": 4278,
+            "like_count": 5,
+            "download_count": 1451
+        },
+        {
+            "ID": 13664,
+            "datetime": "2017-08-06 23:26:00",
+            "last_modified": "2017-08-06 23:26:00",
+            "title": "Zed & Reaper",
+            "filename": "59876c364205d.jpg",
+            "width": 4240,
+            "height": 2384,
+            "mime_type": "image/jpeg",
+            "filesize": 3036194,
+            "pretty_filesize": "3 MB",
+            "links": {
+                "page": "https://lolwallpapers.net/wallpaper/13664",
+                "image": "https://static.lolwallpapers.net/2017/08/59876c364205d.jpg",
+                "download": "https://dl.lolwallpapers.net/?id=13664"
+            },
+            "sizes": {
+                "thumbnail": {
+                    "filename": "59876c364205d-150x150.jpg",
+                    "width": 150,
+                    "height": 150,
+                    "link": "https://static.lolwallpapers.net/2017/08/59876c364205d-150x150.jpg"
+                },
+                "medium": {
+                    "filename": "59876c364205d-300x300.jpg",
+                    "width": 300,
+                    "height": 300,
+                    "link": "https://static.lolwallpapers.net/2017/08/59876c364205d-300x300.jpg"
+                },
+                "large": {
+                    "filename": "59876c364205d-1024x576.jpg",
+                    "width": 1024,
+                    "height": 576,
+                    "link": "https://static.lolwallpapers.net/2017/08/59876c364205d-1024x576.jpg"
+                }
+            },
+            "categories": [
+                {
+                    "ID": 375,
+                    "name": "Fan Art"
+                },
+                {
+                    "ID": 287,
+                    "name": "Zed"
+                }
+            ],
+            "artists": [
+                {
+                    "ID": 807,
+                    "name": "SinusAVS"
+                }
+            ],
+            "uploader_ID": 2,
+            "comment_count": 0,
+            "view_count": 6315,
+            "like_count": 9,
+            "download_count": 2165
+        }
+    ]
+}</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='21' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I try to verify the status code is "200"</span>
+							<div class='pre'>pass :: Status Code is :: 200</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>API test scripts (Negative Scenarios)</span>
+						<span class='test-time'>Nov 5, 2021 02:45:46 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenariooutline node' test-id='23' status='pass'>
+	<span class='duration right label'>0h 0m 0s+846ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">GET: Test the "basecamp.com" (Negative scenario when a user does not have access to the site, user should not be able to access and response code 404 should be returned)</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='24' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@negativeAPCscenario</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">GET: Test the "basecamp.com" (Negative scenario when a user does not have access to the site, user should not be able to access and response code 404 should be returned)</span>
+			
+				<ul class='steps'>
+					<li test-id='25' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I want to set URL as "baseCampEndpoint" with "/projects/1/todos.json" for test case "basecamp.com test"</span>
+							<div class='pre'>pass :: Cucumber Hostname URL is :: https://basecamp.com/999999999/api/v1/projects/1/todos.json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='26' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I set header content type as "application/json"</span>
+							<div class='pre'>pass :: content type is :: application/json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='27' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I hit the API with requestbody "" and request method is "GET"</span>
+							<div class='pre'>pass :: Request successfully processed</div>
+							<div class='pre'>Response is :: <p>There is no active Basecamp at this address.</p><p><a href="https://launchpad.37signals.com/basecamp">Sign in</a> to access your Basecamp.</p></div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='28' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I try to verify the status code is "404"</span>
+							<div class='pre'>pass :: Status Code is :: 404</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='29' status='pass'>
+	<span class='duration right label'>0h 0m 0s+105ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">POST: Test the "openchargemap.org" (When user does not have authentication key to perform a POST request, then response with 403 error code should be displayed)</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='30' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@negativeAPCscenario</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">POST: Test the "openchargemap.org" (When user does not have authentication key to perform a POST request, then response with 403 error code should be displayed)</span>
+			
+				<ul class='steps'>
+					<li test-id='31' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I want to set URL as "openchargemapEndpoint" with "/?action=comment_submission&format=json" for test case "openchargemap.org test"</span>
+							<div class='pre'>pass :: Cucumber Hostname URL is :: https://api.openchargemap.io/v3/?action=comment_submission&format=json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='32' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I set header content type as "application/json"</span>
+							<div class='pre'>pass :: content type is :: application/json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='33' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I hit the API with requestbody "testdata/openChargeMapreqFormat.json" and request method is "POST"</span>
+							<div class='pre'>pass :: Request successfully processed</div>
+							<div class='pre'>Response is :: You must specify an API Key, either in an X-API-Key header or key= query string parameter.</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='34' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I try to verify the status code is "403"</span>
+							<div class='pre'>pass :: Status Code is :: 403</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>POST: Scenarios related to POST requests</span>
+						<span class='test-time'>Nov 5, 2021 02:45:47 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenariooutline node' test-id='36' status='pass'>
+	<span class='duration right label'>0h 0m 1s+364ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">POST: Test the "api.reliefweb.com"</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='37' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@postAPC</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">POST: Test the "api.reliefweb.com"</span>
+			
+				<ul class='steps'>
+					<li test-id='38' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I want to set URL as "reliefwebEndpoint" with "/reports?appname=apidoc" for test case "api.reliefweb test"</span>
+							<div class='pre'>pass :: Cucumber Hostname URL is :: https://api.reliefweb.int/v1/reports?appname=apidoc</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='39' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I set header content type as "application/json"</span>
+							<div class='pre'>pass :: content type is :: application/json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='40' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I hit the API with requestbody "testdata/reliefWebreqPostFormat.json" and request method is "POST"</span>
+							<div class='pre'>pass :: Request successfully processed</div>
+							<div class='pre'>Response is :: {"time":30,"href":"https:\/\/api.reliefweb.int\/v1\/reports","links":{"self":{"href":"https:\/\/api.reliefweb.int\/v1\/reports"},"next":{"href":"https:\/\/api.reliefweb.int\/v1\/reports?offset=2&limit=2"}},"took":22,"totalCount":910782,"count":2,"data":[{"id":"3182459","score":1,"fields":{"title":"More than 100 former Al-Shabaab combatants graduate from Baidoa Rehabilitation Centre"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182459"},{"id":"3182419","score":1,"fields":{"title":"SNGRE coordin\u00f3 Asistencia Humanitaria para familias del cant\u00f3n Ba\u00f1os de Agua Santa"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182419"}]}</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='41' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I try to verify the status code is "200"</span>
+							<div class='pre'>pass :: Status Code is :: 200</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='42' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I try to verify the response value "count" is "2"</span>
+							<div class='pre'>Actual Value is  ::2</div>
+							<div class='pre'>Expected Value is  ::2</div>
+							<div class='pre'>pass count : Expected value : 2 mathches with Actual Value : 2</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>PUT: Scenarios related to PUT requests</span>
+						<span class='test-time'>Nov 5, 2021 02:45:49 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenariooutline node' test-id='44' status='pass'>
+	<span class='duration right label'>0h 0m 1s+396ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">PUT: Test the "api.reliefweb.com"</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='45' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@putAPC</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">PUT: Test the "api.reliefweb.com"</span>
+			
+				<ul class='steps'>
+					<li test-id='46' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I want to set URL as "reliefwebEndpoint" with "/reports?appname=apidoc" for test case "api.reliefweb test"</span>
+							<div class='pre'>pass :: Cucumber Hostname URL is :: https://api.reliefweb.int/v1/reports?appname=apidoc</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='47' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I set header content type as "application/json"</span>
+							<div class='pre'>pass :: content type is :: application/json</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='48' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I hit the API with requestbody "testdata/reliefwebPutreqFormat.json" and request method is "PUT"</span>
+							<div class='pre'>pass :: Request successfully processed</div>
+							<div class='pre'>Response is :: {"time":32,"href":"https:\/\/api.reliefweb.int\/v1\/reports","links":{"self":{"href":"https:\/\/api.reliefweb.int\/v1\/reports"},"next":{"href":"https:\/\/api.reliefweb.int\/v1\/reports?offset=12&limit=12"}},"took":24,"totalCount":910782,"count":12,"data":[{"id":"3182459","score":1,"fields":{"title":"More than 100 former Al-Shabaab combatants graduate from Baidoa Rehabilitation Centre"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182459"},{"id":"3182419","score":1,"fields":{"title":"SNGRE coordin\u00f3 Asistencia Humanitaria para familias del cant\u00f3n Ba\u00f1os de Agua Santa"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182419"},{"id":"3182394","score":1,"fields":{"title":"UNHCR Cross-Border Humanitarian Response Fact Sheet - Northwest Syria - May 2019"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182394"},{"id":"3182369","score":1,"fields":{"title":"UN expert urges Eritrea to allow religious institutions to operate freely and respect the right of freedom of religion"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182369"},{"id":"3182364","score":1,"fields":{"title":"Communique of the 67th Extra-ordinary Session of IGAD Council of Ministers on the Situation in South Sudan"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182364"},{"id":"3182329","score":1,"fields":{"title":"Espa\u00f1a asume la presidencia del Grupo de Donantes de ayuda humanitaria de las Naciones Unidas"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182329"},{"id":"3182324","score":1,"fields":{"title":"A win for women worldwide: Historic global treaty to end violence and harassment at work agreed today"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182324"},{"id":"3182299","score":1,"fields":{"title":"SNGRE coordina acciones con ONG para fortalecimiento de los Comit\u00e9s Comunitarios de Gesti\u00f3n de Riesgos"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182299"},{"id":"3182294","score":1,"fields":{"title":"M\u00e1s de 14.400 kilos de alimentos son entregados a comunidades ind\u00edgenas del Chaco"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182294"},{"id":"3182289","score":1,"fields":{"title":"Descendi\u00f3 a 8554 el n\u00famero de personas desplazadas en todo el pa\u00eds"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182289"},{"id":"3182279","score":1,"fields":{"title":"Colombia: Impacto humanitario y deterioro del contexto en el departamento del Choc\u00f3 en 2019 (Enero a abril de 2019)"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182279"},{"id":"3182264","score":1,"fields":{"title":"Latest from the OSCE Special Monitoring Mission to Ukraine (SMM), based on information received as of 19:30, 19 June 2019"},"href":"https:\/\/api.reliefweb.int\/v1\/reports\/3182264"}]}</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='49' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I try to verify the status code is "200"</span>
+							<div class='pre'>pass :: Status Code is :: 200</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='50' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I try to verify the response value "count" is "12"</span>
+							<div class='pre'>Actual Value is  ::12</div>
+							<div class='pre'>Expected Value is  ::12</div>
+							<div class='pre'>pass count : Expected value : 12 mathches with Actual Value : 12</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@getAPC</span>
+						<span class='category-status right'>
+							<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 5, 2021 02:45:42 AM</td>
+										<td class='linked' test-id='3'>GET: Scenarios related to GET requests.GET: Test the "imgflip.com".GET: Test the "imgflip.com"</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 5, 2021 02:45:45 AM</td>
+										<td class='linked' test-id='10'>GET: Scenarios related to GET requests.GET: Test the "dog.ceo".GET: Test the "dog.ceo"</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 5, 2021 02:45:46 AM</td>
+										<td class='linked' test-id='17'>GET: Scenarios related to GET requests.GET: Test the "lolwallpapers.docs.apiary.io".GET: Test the "lolwallpapers.docs.apiary.io"</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@negativeAPCscenario</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 5, 2021 02:45:46 AM</td>
+										<td class='linked' test-id='24'>API test scripts (Negative Scenarios).GET: Test the "basecamp.com" (Negative scenario when a user does not have access to the site, user should not be able to access and response code 404 should be returned).GET: Test the "basecamp.com" (Negative scenario when a user does not have access to the site, user should not be able to access and response code 404 should be returned)</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 5, 2021 02:45:47 AM</td>
+										<td class='linked' test-id='30'>API test scripts (Negative Scenarios).POST: Test the "openchargemap.org" (When user does not have authentication key to perform a POST request, then response with 403 error code should be displayed).POST: Test the "openchargemap.org" (When user does not have authentication key to perform a POST request, then response with 403 error code should be displayed)</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@postAPC</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 5, 2021 02:45:47 AM</td>
+										<td class='linked' test-id='37'>POST: Scenarios related to POST requests.POST: Test the "api.reliefweb.com".POST: Test the "api.reliefweb.com"</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@putAPC</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 5, 2021 02:45:49 AM</td>
+										<td class='linked' test-id='45'>PUT: Scenarios related to PUT requests.PUT: Test the "api.reliefweb.com".PUT: Test the "api.reliefweb.com"</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>7</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>32</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Nov 5, 2021 02:45:42 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Nov 5, 2021 02:45:50 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>8,231ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>user</td>
+								<td>GANESH$</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>Windows 10</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@getAPC</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@negativeAPCscenario</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@postAPC</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@putAPC</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<div id='testrunner-logs-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>TestRunner Logs</h5>
+		
+		<div class='card-panel'>
+				Runner Output message
+		</div>
+	</div>
+</div>
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 4,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 7,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 0,
+				
+				passGrandChild: 32,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 			
+      
+        $(document).ready(function() {
+        
+        });
+      
+		
+ 		</script>
+	</body>
+	
+</html>

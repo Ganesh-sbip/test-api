@@ -1,0 +1,9 @@
+{
+    "ChargePointID": 12345,
+    "CommentTypeID": 10,
+    "UserName": "A. Nickname",
+    "Comment": "This place is awesome, free cake for EV owners!",
+    "Rating": 5,
+    "RelatedURL": "http://awesomevplace.com",
+    "CheckinStatusTypeID": 0
+}
